@@ -1,0 +1,24 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-black">
+    <div class="container"><!--quitamos el fluid para q se centre-->
+      <a class="navbar-brand fw-bold fst-italic" href="/">NA</a><!--la clase fw-bold para negrita, y font-style italic-->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto"><!--ms-auto para poner las pestañas a la der-->
+          <!--quitamos dos pestañas y modificamso las otras dos-->
+          <li class="nav-item">
+            <!--<a class="nav-link" href="/blog">Blog</a> #y en Blog que nos envíe a blog -->
+            <a class="nav-link" href="{% url 'blog:posts' %}">Blog</a><!--tamb se puede así-->
+          </li>
+          <li class="nav-item d-flex align-items-center"><!--centramos el botón-->
+            <!--<a class="nav-link" href="#">Download CV</a>-->
+            <a class="btn btn-primary btn-sm" href="{% static 'portfolio/cv.pdf' '%}" target="_blank">Download CV</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  

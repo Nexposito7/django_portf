@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block content %}<!--y colocamos dentro el contenido-->
+<!--metemos TODO el contenido en un div(.text-center) para centrarlo-->
+<div class="text-center">
+    <h2>{{post.title}}</h2>
+    <h3 class="my-2 h5 text-muted">{{post.date|date:'F jS Y'}}</h3>
+    <!--colocamos la img arriba-->
+    <img src="{{post.image.url}}" alt="{{post.title}}" class="img-fluid">
+    <!--y metemos el contenido, la descripción, en un div(.my-4) para separarlo:-->
+    <div class="my-4"><p>{{post.description|safe}}</p><!--safe para interpretar html--></div>
+</div>    
+{% endblock %}
